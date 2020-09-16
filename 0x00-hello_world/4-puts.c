@@ -1,5 +1,9 @@
 #include<stdio.h>
-/*Greeting the World*/
+/**
+ *main - Greeting the World
+ *
+ *Return: 0 is no error
+*/
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
