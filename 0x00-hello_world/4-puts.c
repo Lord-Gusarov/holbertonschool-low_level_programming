@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 /*Greeting the World*/
 int main(void)
 {
