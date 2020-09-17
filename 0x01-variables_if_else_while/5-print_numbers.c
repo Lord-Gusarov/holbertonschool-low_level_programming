@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 /**
- *main - prints lowercase alphabet except q and e
+ *main - prints all the digits of base 10
  *
  *Return: always zero (succes)
  */
 int main(void)
 {
-	char ch;
+	int ch;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 0; ch <= 9; ch++)
 	{
-		if (ch != 'q' && ch != 'e')
-			putchar(ch);
+		putchar(ch + '0');
 	}
 
 	putchar('\n');
