@@ -18,11 +18,10 @@ int main(void)
 
 	int d = n % 10;
 
-	printf("Last digit of %i is %i and is ", n, d);
-	if (d > 5)
+	if (d > 0)
+		printf("Last digit of %i is %i ", n, d);
+	else if (d > 5)
 		puts("greater than 5");
-	else if (d == 0)
-		puts("0");
 	else
 		puts("less than 6 and not 0");
 
