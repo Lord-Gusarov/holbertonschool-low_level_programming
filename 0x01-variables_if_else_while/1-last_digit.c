@@ -3,28 +3,26 @@
 #include <stdio.h>
 
 /**
- *main - prints a number and wether the last digit is greater than 5, less than
- * 6 or zero
+ * main - Print the the last dgigit of a number and whether is
+ * positive or negative
  *
- *Return: 0 always zero
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int n;
+	int d;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-
-	int  d = n % 10;
-
-	fprintf("Last digit of %d is %d and is ", n, d);
+	d = n % 10;
 	if (d > 5)
-		puts("greater than 5");
-	if (d == 0)
-		puts("0");
-	if (d < 6)
-		puts("less than 6 and not 0");
-
+		printf("Last digit of %i is %i and is greater than 5\n", n,
+		       d);
+	else if (d == 0)
+		printf("Last digit of %i is %i and is 0\n", n, d);
+	else
+		printf("Last digit of %i is %i and is less than 6 and not 0\n",
+		       n, d);
 	return (0);
 }
