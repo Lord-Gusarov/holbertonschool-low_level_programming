@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <time.h>
 /* more headers goes there */
-
 /**
  *main - Determines whether the last digit of a random generated number is a
  *       gretaer than 5, less than 6 or a zero
