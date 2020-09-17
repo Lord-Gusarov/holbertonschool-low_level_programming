@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdip.h>
+#include <stdio.h>
 /* more headers goes there */
 /**
 *main - Prints wheter a random number is a zero,
