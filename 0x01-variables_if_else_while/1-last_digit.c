@@ -18,7 +18,7 @@ int main(void)
 
 	int  d = n % 10;
 
-	printf("Last digit of %d is %d and is ", n, d);
+	fprintf("Last digit of %d is %d and is ", n, d);
 	if (d > 5)
 		puts("greater than 5");
 	if (d == 0)

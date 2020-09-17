@@ -13,11 +13,11 @@ int main(void)
 
 	for (d1 = 0; d1 < 10; d1++)
 	{
-		for (d2 = 0; d2 < 10; d2++)
+		for (d2 = 0; d2 < 9; d2++)
 		{
 			for (d3 = d1; d3 < 10; d3++)
 			{
-				for (d4 = d2 + 1 ; d4 < 10; d4++)
+				for (d4 = 1 ; d4 < 10; d4++)
 				{
 				putchar(d1 + '0');
 				putchar(d2 + '0');
