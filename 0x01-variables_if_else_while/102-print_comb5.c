@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int d1, d2, d3 , d4;
+	int d1, d2, d3, d4;
 
 	int end1, end2;
 
@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (d2 = 0; d2 < 10; d2++)
 		{
-			for (d3 = d1 ; d3 < 10; d3++)
+			for (d3 = d1; d3 < 10; d3++)
 			{
 				for (d4 = d2 + 1 ; d4 < 10; d4++)
 				{
@@ -25,9 +25,9 @@ int main(void)
 				putchar(d3 + '0');
 				putchar(d4 + '0');
 
-				end1 = d1 *10 + d2;
+				end1 = d1 * 10 + d2;
 				end2 = d3 * 10 + d4;
-				if ( ! ((end1 == 98) && (end2 == 99)))
+				if (!((end1 == 98) && (end2 == 99)))
 				{
 					putchar(',');
 					putchar(' ');
