@@ -19,7 +19,7 @@ int main(void)
 
 	double d = n % 10;
 
-	printf("Last digit of %d is %d and is ");
+	printf("Last digit of %d is %d and is ", n, d);
 	if (d == 0)
 		puts("0");
 	if (d > 5)
