@@ -1,0 +1,13 @@
+#include <stdio.h>
+/**
+ *print_alphabet -  print the alpahbet in lowercase
+ *
+ */
+void print_alphabet(void)
+{
+	char ch;
+
+	for (ch = 'a'; ch <= 'z' ; ch++)
+		putchar(ch);
+	putchar('\n');
+}
