@@ -1,5 +1,4 @@
-#include <stdio.h>
-#define sizeOf_ch 9
+#include "holberton.h"
 /**
  *main - prints "Holberton" using _putchar
  *
@@ -9,13 +8,13 @@ int main(void)
 {
 	int i;
 
-	char ch[sizeOf_ch] = "Holberton";
+	char ch[9] = "Holberton";
 
-	for (i = 0; i < sizeOf_ch; i++)
+	for (i = 0; i < 9; i++)
 	{
-		putchar(ch[i]);
+		_putchar(ch[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
