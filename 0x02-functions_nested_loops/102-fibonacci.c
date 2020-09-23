@@ -13,7 +13,8 @@ int main(void)
 	long long int next;
 	int flimit = 50;
 
-	for (count = 2; count <= flimit; count++)
+	printf("1, 2, ");
+	for (count = 3; count <= flimit; count++)
 	{
 		next = f1 + f2;
 		f1 = f2;
