@@ -8,9 +8,9 @@
 int main(void)
 {
 	int count;
-	long long int f1 = 1;
-	long long int f2 = 2;
-	long long int next;
+	long int f1 = 1;
+	long int f2 = 2;
+	long int next;
 	int flimit = 50;
 
 	printf("1, 2, ");
@@ -19,7 +19,7 @@ int main(void)
 		next = f1 + f2;
 		f1 = f2;
 		f2 = next;
-		printf("%lld", next);
+		printf("%ld", next);
 		if (count < flimit)
 			printf(", ");
 	}
