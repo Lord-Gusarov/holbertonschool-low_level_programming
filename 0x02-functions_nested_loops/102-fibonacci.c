@@ -18,7 +18,7 @@ int main(void)
 		next = f1 + f2;
 		f1 = f2;
 		f2 = next;
-		printf("%llu", next);
+		printf("%lli", next);
 		if (count < flimit)
 			printf(", ");
 	}
