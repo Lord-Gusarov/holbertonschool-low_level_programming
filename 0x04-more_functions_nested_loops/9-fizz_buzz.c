@@ -24,7 +24,8 @@ int main(void)
 			if (i % 5 == 0)
 				printf("%s", "Buzz");
 		}
-		printf(" ");
+		if (i != limit)
+			printf(" ");
 	}
 	printf("\n");
 }
