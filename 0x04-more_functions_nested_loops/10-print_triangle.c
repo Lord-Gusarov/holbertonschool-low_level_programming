@@ -1,16 +1,16 @@
 #include "holberton.h"
 
 /**
- *print_triangle - prints a triangle, followed by a new line.
- *@size: desired size of the triangle measured by the char '#'
+ *print_triangle - prints a triangle, followed by a new line
+ *@size: desired size of the triangle
  *
- *Return: --nothing--
+ *Return: -nothing-
  */
 void print_triangle(int size)
 {
 	if (size > 0)
 	{
-		int i, sym,  spaces;
+		int i, sym, spaces;
 
 		for (i = 1; i <= size; i++)
 		{
