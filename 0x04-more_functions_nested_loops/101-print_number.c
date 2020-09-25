@@ -26,5 +26,4 @@ void print_number(int n)
 		c = c / 10;
 	}
 
-	_putchar('\n');
 }
