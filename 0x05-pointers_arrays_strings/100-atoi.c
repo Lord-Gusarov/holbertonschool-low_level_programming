@@ -25,11 +25,10 @@ int _atoi(char *s)
 		if (ch >= '0' && ch <= '9')
 		{
 			strtd = 1;
-			n = n * 10 + ch - 48;
+			n = n * 10 + (ch - 48) * sign;
 		}
 	}
 
-	n *= sign;
 
 	return (n);
 }
