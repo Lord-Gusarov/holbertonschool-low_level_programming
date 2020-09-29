@@ -18,11 +18,11 @@ int _atoi(char *s)
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		ch = *(s + i);
-		if(strtd && (ch < '0' || ch > '9'))
+		if (strtd && (ch < '0' || ch > '9'))
 			break;
-		if(ch == '-')
+		if (ch == '-')
 			sign *= -1;
-		if(ch >= '0' && ch <= '9')
+		if (ch >= '0' && ch <= '9')
 		{
 			strtd = 1;
 			n = n * 10 + ch - 48;
