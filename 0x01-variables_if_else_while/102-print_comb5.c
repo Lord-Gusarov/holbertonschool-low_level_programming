@@ -23,17 +23,17 @@ int main(void)
 					e2 = d3 * 10 + d4;
 					if (e2 > e1)
 					{
-						putchar(d1 + '0');
-						putchar(d2 + '0');
-						putchar(' ');
-						putchar(d3 + '0');
-						putchar(d4 + '0');
+					putchar(d1 + '0');
+					putchar(d2 + '0');
+					putchar(' ');
+					putchar(d3 + '0');
+					putchar(d4 + '0');
 
-						if (!((e1 == 98) && (e2 == 99)))
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					if (!((e1 == 98) && (e2 == 99)))
+					{
+					putchar(',');
+					putchar(' ');
+					}
 					}
 				}
 			}
