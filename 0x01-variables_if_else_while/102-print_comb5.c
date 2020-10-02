@@ -9,30 +9,32 @@ int main(void)
 {
 	int d1, d2, d3, d4;
 
-	int end1, end2;
+	int e1, e2; /*e for end*/
 
 	for (d1 = 0; d1 < 10; d1++)
 	{
-		for (d2 = 0; d2 < 9; d2++)
+		for (d2 = 0; d2 < 10; d2++)
 		{
 			for (d3 = d1; d3 < 10; d3++)
 			{
-				for (d4 = 1 ; d4 < 10; d4++)
+				for (d4 = 0 ; d4 < 10; d4++)
 				{
-				putchar(d1 + '0');
-				putchar(d2 + '0');
-				putchar(' ');
-				putchar(d3 + '0');
-				putchar(d4 + '0');
+					e1 = d1 * 10 + d2;
+					e2 = d3 * 10 + d4;
+					if (e2 > e1)
+					{
+						putchar(d1 + '0');
+						putchar(d2 + '0');
+						putchar(' ');
+						putchar(d3 + '0');
+						putchar(d4 + '0');
 
-				end1 = d1 * 10 + d2;
-				end2 = d3 * 10 + d4;
-				if (!((end1 == 98) && (end2 == 99)))
-				{
-					putchar(',');
-					putchar(' ');
-
-				}
+						if (!((e1 == 98) && (e2 == 99)))
+						{
+							putchar(',');
+							putchar(' ');
+						}
+					}
 				}
 			}
 		}
