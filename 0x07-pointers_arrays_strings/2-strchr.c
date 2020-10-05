@@ -21,6 +21,6 @@ char *_strchr(char *s, char c)
 	/* in case the character being look for is '\0' */
 	if (*s == c)
 		return (s);
-	
+
 	return ('\0');
 }
