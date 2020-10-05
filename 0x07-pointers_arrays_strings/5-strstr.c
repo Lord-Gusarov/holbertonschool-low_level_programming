@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  *exact_pre_str - tells wether the second string is contained entirely
@@ -18,7 +17,9 @@ int exact_pre_str(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return (*s1 == *s2);
+	if (!(*s2))
+		return (1);
+	return (0);
 }
 
 /**
@@ -37,7 +38,5 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack);
 		haystack++;
 	}
-	if(*haystack == *needle)
-		return (haystack);
 	return ('\0');
 }
