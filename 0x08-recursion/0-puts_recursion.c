@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- *_puts_recursion - prints a string  char by char using recursion
+ *_puts_recursion - prints a string  char by char using recursion 
+ * until the null character is found
  *@s: string to be printed
  *
  *Return: -nothing-
