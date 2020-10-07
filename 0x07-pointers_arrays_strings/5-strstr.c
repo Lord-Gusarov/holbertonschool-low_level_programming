@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- *exact_pre_str - tells wether the second string is contained
+ *exact_pre_str - tells wether the second string is contained entirely
  *in the first string at offset 0
  *@s1: string to analyze
- *@s2: second string to comparestring to loof for at offset 0
+ *@s2: second string to compare, string to look for at offset 0
  *
  *Return: 1 if exact match, 0 if not
  */
@@ -17,7 +17,9 @@ int exact_pre_str(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return (*s1 == *s2);
+	if (!(*s2))
+		return (1);
+	return (0);
 }
 
 /**
@@ -36,6 +38,5 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack);
 		haystack++;
 	}
-
 	return ('\0');
 }
