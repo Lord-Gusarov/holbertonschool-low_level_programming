@@ -6,7 +6,7 @@
  * @s1: a string to compare
  * @s2: a string to compare
  *
- * Return i if the string can be considred identical, otherwise return 0
+ * Return: if the string can be considred identical, otherwise return 0
  */
 int wildcmp(char *s1, char *s2)
 {
