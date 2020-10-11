@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long p_f1 = 0, s_f1 = 1, p_f2 = 0, s_f2 = 2;
-	unsigned long p_next = 0, s_next = 0, tmp_f1, tmp_f2;
+	unsigned long p_next = 0, s_next = 0;
 	unsigned long factor = 1000000000;
 	int n = 3;
 
