@@ -1,4 +1,4 @@
-#Header file for all task of this project
+/*Header file for all task of this project*/
 int _putchar(char);
 char *_strcat(char *, char *);
 char *_strncat(char *, char *, int);
