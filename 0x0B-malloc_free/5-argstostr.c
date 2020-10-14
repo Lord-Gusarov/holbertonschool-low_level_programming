@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 	/*assing to @ac takes care of the spaces for'\n' and terminating NULL*/
 	int m_len = ac;
 	/*-----------*/
-	int i, ii, m_idx;
+	int i, ii, m_idx = 0;
 	char *m;
 
 	if (ac <= 0 || av == NULL)
@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 		for (ii = 0; av[i][ii] != '\0'; ii++, m_len++)
 			;
 
-	m = malloc(sizeof(char) * m_len);
+	m = malloc(sizeof(char) * m_len + 1);
 	if (m == NULL)
 		return (NULL);
 
