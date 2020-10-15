@@ -15,6 +15,7 @@ void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 /* Advanced--Task : 6 */
 char **strtow(char *str);
+int _wc(char *str);
 /*---Holberton's putchar---*/
 int _putchar(char c);
 #endif
