@@ -56,7 +56,6 @@ char **strtow(char *str)
 			m[w_idx] = malloc(sizeof(char) * wl + 1);
 			if (m[w_idx] == NULL)
 			{
-				printf("point3\n");
 				while (w_idx >= 0)
 					free(m[w_idx--]);
 				free(m);
