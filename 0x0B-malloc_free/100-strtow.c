@@ -1,7 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
-
 /**
  * _wc - word count in a string
  * @str: string to analyze
@@ -33,14 +31,15 @@ int _wc(char *str)
  */
 char **strtow(char *str)
 {
-	char **m;
+	char **m = NULL;
 	int i, ii, w_idx = 0, wl = 0, wc = 0;
 
 	if (str == NULL || str == '\0') /*keep eye out ofr last comparison*/
 		return (NULL);
 	wc = _wc(str);
-	m = malloc(sizeof(char *) * wc + 1);
-	if (m == NULL || wc == 0)
+	if (wc > 0)
+		m = malloc(sizeof(char *) * (wc + 1));
+	if (m == NULL)
 		return (NULL);
 	m[wc] = NULL;
 	for (i = 0; str[i] != '\0'; wl = 0)
@@ -53,7 +52,7 @@ char **strtow(char *str)
 		}
 		if (wl > 0)
 		{
-			m[w_idx] = malloc(sizeof(char) * wl + 1);
+			m[w_idx] = malloc(sizeof(char) * (wl + 1));
 			if (m[w_idx] == NULL)
 			{
 				while (w_idx > 0)
@@ -67,5 +66,6 @@ char **strtow(char *str)
 			w_idx++;
 		}
 	}
+
 	return (m);
 }
