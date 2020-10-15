@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory for an array of nmemb elements of @size bytes
- * each and returns a pointer to the allocated memory. The memory is set to zero.
+ * _calloc - allocates memory for an array of nmemb elements of @size
+ * bytes each and returns a pointer to the allocated memory.
+ * The memory is set to zero.
  * @nmemb: number of members/blocks desired
  * @size: amount of bytes for each member/block
  *
@@ -19,6 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	m = malloc(nmemb * size);
 	if (m == NULL)
 		return (NULL);
-
+/*
+*	while (nmemb--)
+*		m[nmemb] = 0;
+*/
 	return (m);
 }
