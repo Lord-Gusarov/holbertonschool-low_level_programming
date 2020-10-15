@@ -14,6 +14,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *m, *c_ptr;
 	unsigned int limit;
 
+	if (ptr == NULL)
+		return (malloc(new_size));
+
 	if (new_size == 0)
 	{
 		if (ptr != NULL)
@@ -26,9 +29,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	m = malloc(new_size);
 	if (m == NULL)
 		return (NULL);
-	if (ptr == NULL)
-		return (m);
-
 	limit = old_size;
 	if (new_size < old_size)
 		limit = new_size;
