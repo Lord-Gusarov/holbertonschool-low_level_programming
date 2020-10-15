@@ -40,7 +40,7 @@ char **strtow(char *str)
 		return (NULL);
 	wc = _wc(str);
 	m = malloc(sizeof(char *) * wc + 1);
-	if (m == NULL)
+	if (m == NULL || wc == 0)
 		return (NULL);
 	m[wc] = NULL;
 	for (i = 0; str[i] != '\0'; wl = 0)
