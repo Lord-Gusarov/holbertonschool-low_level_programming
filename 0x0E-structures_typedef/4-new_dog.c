@@ -29,22 +29,6 @@ char *_strdup(char *str)
 	return (dup);
 }
 /**
- * free_dog -frees the memory associated with an instance of type struct dog
- * @d: dog to free
- */
-void free_dog(dog_t *d)
-{
-	if (d != NULL)
-	{
-		if (d->name != NULL)
-			free(d->name);
-		if (d->owner != NULL)
-			free(d->owner);
-		free(d);
-	}
-}
-
-/**
  * new_dog - creates a new dog, makes the malloc requesta dn handles
  * initialization
  * @name: name for the dog
@@ -62,11 +46,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	d->name = _strdup(name);
+	if (d->name == NULL)
+		free(d);
 	d->age = age;
 	d->owner = _strdup(owner);
-
-	if (d->name == NULL || d->owner == NULL)
-		free_dog(d);
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+	}
 
 	return (d);
 }
