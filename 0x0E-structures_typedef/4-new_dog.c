@@ -34,7 +34,7 @@ char *_strdup(char *str)
  */
 void free_dog(dog_t *d)
 {
-	if (d != NULL
+	if (d != NULL)
 	{
 		if (d->name != NULL)
 			free(d->name);
@@ -55,16 +55,18 @@ void free_dog(dog_t *d)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t = d;
+	dog_t *d;
 
-	d = malloc(sizeof(struct dog_t));
+	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
 
 	d->name = _strdup(name);
+	d->age = age;
 	d->owner = _strdup(owner);
 
-	if (d->name == NULL or d->owner == NULL)
+	if (d->name == NULL || d->owner == NULL)
 		free_dog(d);
 
 	return (d);
+}
