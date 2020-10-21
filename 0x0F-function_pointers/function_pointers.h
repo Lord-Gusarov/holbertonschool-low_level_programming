@@ -1,5 +1,6 @@
 #ifndef _FUNCTION_POINTERS_H_
 #define _FUNCTION_POINTERS_H_
+#include <stdlib.h>
 /*Holberton's putchar()*/
 int _putchar(char);
 /*Task 0*/
