@@ -1,5 +1,7 @@
 #ifndef _FUNCTION_POINTERS_H_
 #define _FUNCTION_POINTERS_H_
+/*Holberton's putchar()*/
+int _putchar(char);
 /*Task 0*/
 void print_name(char *name, void (*f)(char *));
 /*Task 1*/
