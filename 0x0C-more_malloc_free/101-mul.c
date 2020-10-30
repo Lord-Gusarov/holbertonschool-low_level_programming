@@ -43,7 +43,7 @@ int main(int ac, char **av)
 			}
 		}
 	}
-	while (product[ip] == 0;)
+	while (product[ip] == 0)
 		ip--;
 	for (ip >= 0 ? (ip) : (ip = 0); ip >= 0; --ip)
 		_putchar(product[ip] + Z);
