@@ -43,7 +43,9 @@ int main(int ac, char **av)
 			}
 		}
 	}
-	for (product[ip] == 0 ? (--ip) : (ip); ip >= 0; --ip)
+	while (product[ip] == 0;)
+		ip--;
+	for (ip >= 0 ? (ip) : (ip = 0); ip >= 0; --ip)
 		_putchar(product[ip] + Z);
 	_putchar('\n');
 
@@ -96,7 +98,7 @@ void validate_strings_only_have_digits(char *str1, char *str2)
 
 /**
  * _strlen - calculates the length of a string
- * *str: string to measure
+ * @str: string to measure
  *
  * Return: length of the string
  */
