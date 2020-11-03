@@ -33,11 +33,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			tmp = (traverse->next)->next;
 			free(traverse->next);
 			traverse->next = tmp;
-			break;
+			return (SUCCESS);
 		}
 		traverse = traverse->next;
 		i++;
 	}
 
-	return (SUCCESS);
+	return (FAILURE);
 }
