@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct listint_s - singly linked list
@@ -40,4 +41,12 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 /*task 10*/
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+/*task 11 aka 100*/
+listint_t *reverse_listint(listint_t **head);
+/*task 12 aka 101*/
+size_t print_listint_safe(const listint_t *head);
+/*task 13 aka 102*/
+size_t free_listint_safe(listint_t **h);
+/*task 14 aka 103*/
+listint_t *find_listint_loop(listint_t *head);
 #endif
