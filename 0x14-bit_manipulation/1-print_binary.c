@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 9223372036854775808;
+	unsigned long int mask = 4611686018427387904;
 	int flag = 0;
 
 	while (mask > 0)
@@ -31,6 +31,6 @@ void print_binary(unsigned long int n)
 /*
  * converted max unsigne long int to binary
  * 1111111111111111111111111111111111111111111111111111111111111111
- * 1000000000000000000000000000000000000000000000000000000000000000
+ * 100000000000000000000000000000000000000000000000000000000000000
  * removed a zero cause compiler complained
  */
