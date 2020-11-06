@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- * flip_bits - the number of bits you would need to flip to get from one number to another
+ * flip_bits - the number of bits you would need to flip to get
+ * from one number to another
  * @n: original number
  * @m: destiny number
  * Return: number of flips
