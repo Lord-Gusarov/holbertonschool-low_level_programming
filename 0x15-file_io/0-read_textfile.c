@@ -1,6 +1,6 @@
 #include "holberton.h"
 #define FAIL 0
-#define CLOSE close(reading)
+#define CLOSE free(buff)
 
 /**
  * read_textfile - reads the content of a file and prints it to
@@ -13,10 +13,10 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int reading;
-	int buff[2000] = {'\0'};
+	char *buff = malloc(sizeof(char) * (letters + 1));
 	ssize_t cnt_write = 0;
 
-	if (filename == NULL)
+	if (filename == NULL || buff == NULL)
 		return (FAIL);
 
 	reading  = open(filename, O_RDONLY);
@@ -40,6 +40,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 
+	close(reading);
 	CLOSE;
 
 	return (cnt_write);
