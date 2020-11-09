@@ -1,0 +1,54 @@
+#include "holberton.h"
+#define BUF_LMT 1024
+#define FAILURE (-1)
+/**
+ * main - copies the content of one file to another
+ * @args: the string aguments passed tot he program
+ * @argc: count of rguments passed
+ *
+ * Return: 0 if success, if the number of argument is not the correct one,
+ * exit with code 97
+ * if file_from does not exist, or if you can not read it, exit with code 98
+ * if you can not create or if write to file_to fails, exit with code 99
+ * if you can not close a file descriptor , exit with code 100
+ */
+int main(int argc, char **args)
+{
+	int fd_from, fd_to, cnt_rd;
+	char buf[BUF_LMT] = {'\0'};
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	fd_from = open(args[1], O_RDONLY);
+	if (fd_from == FAILURE)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
+		exit(98);
+	}
+	fd_to = open(args[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd_to == FAILURE)
+	{
+		close(fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", args[2]);
+		exit(99);
+	}
+	do {
+		cnt_rd = read(fd_from, buf, BUF_LMT);
+		write(fd_to, buf, cnt_rd);
+	} while (cnt_rd == BUF_LMT);
+
+	if (close(fd_from) == FAILURE)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_from);
+		exit(100);
+	}
+	if (close(fd_to) == FAILURE)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_to);
+		exit(100);
+	}
+	return (0);
+}
