@@ -13,25 +13,22 @@ int create_file(const char *filename, char *text_content)
 	unsigned int size;
 	int fd;
 
-	if(filename == NULL)
+	if (filename == NULL)
 		return (FAILURE);
 
-	fd = open(filename, O_TRUNC | O_WRONLY);
+	fd = open(filename, O_TRUNC | O_WRONLY | O_CREAT);
 	if (fd == -1)
-	{
-		close(fd);
-		fd = open(filename, O_CREAT | O_RDWR, 0600);
-		if (fd == -1)
-			return (FAILURE);
-	}
-
-	for (size = 0; text_content[size] != '\0'; size++)
-		;
-
-	if (write(fd, text_content, size) == -1)
-	{
-		close(fd);
 		return (FAILURE);
+
+	if (text_content != NULL)
+	{
+		for (size = 0; text_content[size] != '\0'; size++)
+			;
+
+		if (write(fd, text_content, size) == -1)
+		{
+			return (FAILURE);
+		}
 	}
 
 	close(fd);
