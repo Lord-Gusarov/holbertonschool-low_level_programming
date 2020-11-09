@@ -13,11 +13,14 @@ int create_file(const char *filename, char *text_content)
 	unsigned int size;
 	int fd;
 
+	if(filename == NULL)
+		return (FAILURE);
+
 	fd = open(filename, O_TRUNC | O_WRONLY);
 	if (fd == -1)
 	{
 		close(fd);
-		fd = open(filename, O_CREAT | O_RDWR, 00600);
+		fd = open(filename, O_CREAT | O_RDWR, 0600);
 		if (fd == -1)
 			return (FAILURE);
 	}
