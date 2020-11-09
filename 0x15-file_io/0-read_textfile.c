@@ -15,9 +15,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int reading;
 	char *buff = malloc(sizeof(char) * (letters + 1));
 	ssize_t cnt_write = 0;
+	unsigned int i;
 
 	if (filename == NULL || buff == NULL)
 		return (FAIL);
+
+	for (i = 0; i <= letters; i++)
+		buff[i] = '\0';
 
 	reading  = open(filename, O_RDONLY);
 	if (reading == -1)
@@ -31,8 +35,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		CLOSE;
 		return (FAIL);
 	}
-
-	cnt_write = write(STDOUT_FILENO, buff, letters);
+	for (i = 0; buff[i] != '\0'; i++)
+		;
+	cnt_write = write(STDOUT_FILENO, buff, i);
 	if (cnt_write == -1)
 	{
 		CLOSE;
