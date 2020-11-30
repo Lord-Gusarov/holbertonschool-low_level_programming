@@ -1,4 +1,4 @@
-include "lists.h"
+#include "lists.h"
 
 /**
  * print_listint_safe - safelys prints a linked list indicating if there is
@@ -11,6 +11,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	int diff_addr = 0;
 	size_t size = 0;
+
 
 	while (head)
 	{
