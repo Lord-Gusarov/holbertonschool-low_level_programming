@@ -12,6 +12,8 @@ size_t print_listint_safe(const listint_t *head)
 	int diff_addr = 0;
 	size_t size = 0;
 
+	if (head == NULL)
+		exit(98);
 
 	while (head)
 	{
