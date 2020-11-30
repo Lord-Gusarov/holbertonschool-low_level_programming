@@ -17,14 +17,13 @@ size_t print_listint_safe(const listint_t *head)
 		size++;
 		diff_addr = head - head->next;
 
+		printf("[%p] %d\n", (void *)head, head->n);
+
 		if (diff_addr > 0)
-		{
-			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
-		}
 		else
 		{
-			printf("-> [%p] %d\n", (void *)head, head->n);
+			printf("-> [%p] %d\n", (void *)head->next, (head->next)->n);
 			break;
 		}
 	}
