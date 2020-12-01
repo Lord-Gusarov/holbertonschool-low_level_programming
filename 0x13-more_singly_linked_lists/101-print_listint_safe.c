@@ -37,8 +37,8 @@ size_t print_listint_safe(const listint_t *head)
 size_t safe_list_len(const listint_t *h)
 {
 	size_t i = 0, size = 0;
-	unsigned int adrs_size = 100;
-	const listint_t **adrs = malloc(sizeof(void *) * adrs_size);
+	unsigned int adrs_size = 100, m_size = sizeof(void *) * adrs_size;
+	const listint_t **adrs = malloc(m_size);
 
 	if (adrs == NULL)
 		exit(98);
@@ -53,10 +53,10 @@ size_t safe_list_len(const listint_t *h)
 			}
 		if (size == adrs_size)
 		{
-			adrs = _realloc(adrs, adrs_size, adrs_size * 2);
+			adrs = _realloc(adrs, m_size, m_size * 2);
 			if (!adrs)
 				exit(98);
-			adrs_size *= 2;
+			adrs_size *= 2, m_size *= 2;
 		}
 		adrs[size] = h;
 		size++;
