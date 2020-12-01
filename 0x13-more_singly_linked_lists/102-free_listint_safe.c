@@ -17,7 +17,7 @@ size_t free_listint_safe(listint_t **h)
 	size = safe_list_len(*h);
 	runner = *h;
 
-	while(cnt < size)
+	while (cnt < size)
 	{
 		next = runner->next;
 		free(runner);
