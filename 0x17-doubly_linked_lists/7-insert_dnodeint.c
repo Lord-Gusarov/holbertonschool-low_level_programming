@@ -10,7 +10,7 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *trv, *new;
+	dlistint_t *trv, *previous, *new;
 	unsigned int i = 1;
 
 	if (h == NULL || (*h == NULL && idx != 0))
@@ -28,21 +28,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	for (trv = (*h)->next; trv->next != NULL; i++, trv = trv->next)
+	for (trv = *h; trv != NULL; i++)
+	{
+		/*If trv becomes NULL, trv->next == SEG FAULT, var 'previous' avoids that*/
+		previous = trv;
+		trv = trv->next;
 		if (i == idx)
 		{
 			new->next = trv;
-			new->prev = trv->prev;
-			trv->prev->next = new;
+			new->prev = previous;
+			previous->next = new;
 			return (new);
 		}
-
-	if (!(trv->next) && (i == idx))
-	{
-		new->next = NULL;
-		new->prev = trv;
-		trv->next = new;
-		return (new);
 	}
 	free(new);
 	return (NULL);
