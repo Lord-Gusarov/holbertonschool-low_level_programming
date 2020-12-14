@@ -14,8 +14,13 @@ int main(void)
 		{
 			r = a * b;
 			if (r > big)
+			{
 				if (isPalindrome(r))
+				{
+					printf("a = %d,  b = %d\n", a, b);
 					big = r;
+				}
+			}
 		}
 	}
 
