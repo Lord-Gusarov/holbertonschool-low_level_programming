@@ -3,7 +3,7 @@
 int rand(void)
 {
 	static int cnt = -1;
-	int mark[6] = {8, 7, 9, 23, 75, 9};
+	int mark[6] = {74, 8, 7, 9, 23, 8};
 
 	cnt++;
 
