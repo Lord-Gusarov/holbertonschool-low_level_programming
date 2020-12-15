@@ -1,0 +1,4 @@
+#!/bin/bash
+gcc myrand.c -c -fPIC
+gcc myrand.o -shared -o myrand.so
+
