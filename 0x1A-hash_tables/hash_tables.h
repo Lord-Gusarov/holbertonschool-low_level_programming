@@ -84,7 +84,7 @@ void hash_table_print(const hash_table_t *ht);
 /*task 6*/
 void hash_table_delete(hash_table_t *ht);
 /*aux*/
-void free_list(hash_node_t *head);
+void free_list(shash_node_t *head);
 
 shash_table_t *shash_table_create(unsigned long int size);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value);
@@ -93,5 +93,8 @@ void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 void list_add(shash_table_t *, shash_node_t *);
+void insert_sorted_node(shash_node_t *node, shash_table_t *ht);
+
+
 
 #endif

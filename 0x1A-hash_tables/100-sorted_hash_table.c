@@ -7,7 +7,7 @@
 **/
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shastable_t *table;
+	shash_table_t *table;
 	shash_node_t **array;
 	unsigned long int i;
 
@@ -20,7 +20,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	{
 		array[i] = NULL;
 	}
-	table = malloc(sizeof(shastable_t));
+	table = malloc(sizeof(shash_table_t));
 	if (table == NULL)
 		return (NULL);
 	table->array = array;
@@ -215,7 +215,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * free_list - fress linked lists
+ * free_list - frees linked lists
  * @head: head of the list
  * Return: no return
  */
@@ -228,7 +228,7 @@ void free_list(shash_node_t *head)
 	while (aux)
 	{
 	aux2 = aux->next;
-	fee(aux->value);
+	free(aux->value);
 	free(aux->key);
 	free(aux);
 	aux = aux2;
@@ -251,4 +251,3 @@ void shash_table_delete(shash_table_t *ht)
 	free(ht->array);
 	free(ht);
 }
-r
