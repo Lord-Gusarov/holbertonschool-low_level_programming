@@ -10,8 +10,14 @@ def island_perimeter(grid):
     Args:
         grid (2D list): 1's and 0's
     """
-    if type(grid) is not list or type(grid[0]) is not list:
+    if type(grid) is not list:
         return 0
+    for x in grid:
+        if type(x) is not list:
+            return 0
+        for num in x:
+            if type(num) is not int:
+                return 0
 
     p = 0
     r_max = len(grid)
